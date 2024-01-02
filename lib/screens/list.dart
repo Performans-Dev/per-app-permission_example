@@ -54,7 +54,10 @@ class _PermissionListScreenState extends State<PermissionListScreen>
                             child: ListTile(
                               title: const Text("Notification"),
                               trailing: GetPlatform.isAndroid
-                                  ? const Icon(Icons.check)
+                                  ? const Icon(
+                                      Icons.check,
+                                      color: Colors.green,
+                                    )
                                   : null,
                               onTap: () {
                                 controller.requestNotificationPermission();
